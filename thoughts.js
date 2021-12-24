@@ -59,14 +59,10 @@ let m = 'Good Morning!!';
 let a = 'Good Afternoon!!';
 let e = 'Good Evening!!';
 let n = 'Good Night!!';
-if (hour > 6 && hour < 12)
-    console.log(m);
-else if (hour >= 12 && hour < 18)
-    console.log(a);
-else if (hour >= 18 && hour < 21)
-    console.log(e)
-else {
-    console.log(n)
+if (hour > 6 && hour < 12) console.log(m);
+else if (hour >= 12 && hour < 18) console.log(a);
+else if (hour >= 18 && hour < 21) console.log(e);
+else console.log(n);
 
 
 
