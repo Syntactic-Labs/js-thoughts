@@ -49,11 +49,10 @@ let number = square(4);
 console.log(number);
 console.log(square(4));*/
 
-//Hour
+/*//Hour
 //If hour is between 6am and 12pm: Good Morning!
 //If it is between 12pm and 6pm: Good Afternoon!
 //Otherwise: Good Evening!
-
 let hour = 10;
 let m = 'Good Morning!!';
 let a = 'Good Afternoon!!';
@@ -62,8 +61,21 @@ let n = 'Good Night!!';
 if (hour > 6 && hour < 12) console.log(m);
 else if (hour >= 12 && hour < 18) console.log(a);
 else if (hour >= 18 && hour < 21) console.log(e);
-else console.log(n);
+else console.log(n);*/
 
-
+/*//Factory Function (funcs with funcs)
+function createCircle(radius) {
+    return {
+        radius,
+        draw() {
+            console.log('draw');
+        }
+    };
+}
+const circle1 = createCircle(1);
+const circle2 = createCircle(2);
+const circle3 = createCircle(3);
+const circle4 = createCircle(4);
+console.log(circle1,circle2,circle3,circle4);*/
 
 
