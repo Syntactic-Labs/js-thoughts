@@ -63,7 +63,7 @@ else if (hour >= 12 && hour < 18) console.log(a);
 else if (hour >= 18 && hour < 21) console.log(e);
 else console.log(n);*/
 
-/*//Factory Function (funcs with funcs)
+/*//Factory Function (funcs with funcs) should use camel case.
 function createCircle(radius) {
     return {
         radius,
@@ -78,4 +78,11 @@ const circle3 = createCircle(3);
 const circle4 = createCircle(4);
 console.log(circle1,circle2,circle3,circle4);*/
 
-
+//Constructor Fuction (should use pascal case)
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function() {
+        console.log('draw');
+    }
+}
+const circle = new Circle(1);
