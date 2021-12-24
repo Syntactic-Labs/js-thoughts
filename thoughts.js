@@ -87,7 +87,7 @@ function Circle(radius) {
 }
 const circle = new Circle(1);*/
 
-//getters and setters
+/*//getters and setters
 const person = {
     firstName: 'Michael',
     lastName: 'Walker',
@@ -101,4 +101,13 @@ const person = {
     }
 };
 person.fullName = 'Kristy Walker';
-console.log(person);
+console.log(person);*/
+
+//Value example. 
+let obj = { value: 10 };
+function increase(obj) {
+    obj.value++
+};
+increase(obj);
+console.log(obj);
+console.log(obj.value);
