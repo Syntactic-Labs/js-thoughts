@@ -78,11 +78,27 @@ const circle3 = createCircle(3);
 const circle4 = createCircle(4);
 console.log(circle1,circle2,circle3,circle4);*/
 
-//Constructor Fuction (should use pascal case)
+/*//Constructor Fuction (should use pascal case)
 function Circle(radius) {
     this.radius = radius;
     this.draw = function() {
         console.log('draw');
     }
 }
-const circle = new Circle(1);
+const circle = new Circle(1);*/
+
+//getters and setters
+const person = {
+    firstName: 'Michael',
+    lastName: 'Walker',
+    get fullName() {
+        return `${person.firstName} ${person.lastName}`
+    },
+    set fullName(value){
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
+person.fullName = 'Kristy Walker';
+console.log(person);
