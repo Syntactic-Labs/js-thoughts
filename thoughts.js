@@ -104,10 +104,27 @@ person.fullName = 'Kristy Walker';
 console.log(person);*/
 
 //Value example. 
-let obj = { value: 10 };
+/*let obj = { value: 10 };
 function increase(obj) {
     obj.value++
 };
 increase(obj);
 console.log(obj);
-console.log(obj.value);
+console.log(obj.value);*/
+
+function calculatePrice(price, taxes, description) {
+    /*if (taxes == null) {
+        taxes = 0.05;
+    }*/ //Does the same thing at line 119 !Check browser support!
+    taxes = taxes ?? 0.05
+    description = description ?? "Default item";
+    const total = price * (1+taxes)
+    console.log(
+      `%c${description}With Tax: %c$${total}`,
+      "font-weight: bold; color: red",
+      "color: green"
+    );
+}
+calculatePrice(100, 0.07, "Myitem");
+calculatePrice(100, 0, "My other item");
+calculatePrice(100, undefined, "");
