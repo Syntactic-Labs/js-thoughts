@@ -111,20 +111,54 @@ function increase(obj) {
 increase(obj);
 console.log(obj);
 console.log(obj.value);*/
-
+/*
 function calculatePrice(price, taxes, description) {
-    /*if (taxes == null) {
-        taxes = 0.05;
-    }*/ //Does the same thing at line 119 !Check browser support!
+    //if (taxes == null) {
+        //taxes = 0.05;
+    //} //Does the same thing at line 119 !Check browser support!
     taxes = taxes ?? 0.05
     description = description ?? "Default item";
     const total = price * (1+taxes)
     console.log(
       `%c${description}With Tax: %c$${total}`,
-      "font-weight: bold; color: red",
-      "color: green"
+      "font-weight: bold; color: red; background-color: black;",
+      "color: white; background-color: blue;"
     );
 }
 calculatePrice(100, 0.07, "Myitem");
 calculatePrice(100, 0, "My other item");
 calculatePrice(100, undefined, "");
+*/
+
+/*function printFarmInventory(cows, chickens) {
+let cowString = String(cows);
+    while (cowString.length < 3) {
+        cowString = "0" + cowString;
+    }
+    console.log(`${cowString} Cows`)
+    let chickenString = String(chickens);
+    while (chickenString.length < 3) {
+        chickenString = "0" + chickenString;
+    }
+    console.log(`${chickenString} Chickens`)
+}
+printFarmInventory(15,3)*/
+/*
+function countAndLabel(count,label) {
+    let num = String(count);
+    while (num.length < 3) {
+        num = "0" + num;
+    }
+    console.log(`${num} ${label}`)
+}
+function printFarmInventory(aCount1,aName1,aCount2,aName2,aCount3,aName3){
+  countAndLabel(aCount1, aName1);
+  countAndLabel(aCount2, aName2);
+  countAndLabel(aCount3, aName3);
+}
+printFarmInventory(12,'Cows',2,'Chicken',324,'Pigs')
+*/
+const names = ['John', 'Mary', 'Bob'];
+const greet = names.map((name) => `Hello ${name}`);
+console.log(greet);
+
