@@ -158,7 +158,10 @@ function printFarmInventory(aCount1,aName1,aCount2,aName2,aCount3,aName3){
 }
 printFarmInventory(12,'Cows',2,'Chicken',324,'Pigs')
 */
-const names = ['John', 'Mary', 'Bob'];
-const greet = names.map((name) => `Hello ${name}`);
-console.log(greet);
+function greeting1(name){
+    console.log(`Hello ${name}`)
+}
+greeting1("John");
 
+let greeting2 = name => console.log(`Hello ${name}!`);
+greeting2("Mike");
