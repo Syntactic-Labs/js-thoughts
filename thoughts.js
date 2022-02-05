@@ -159,10 +159,29 @@ function printFarmInventory(aCount1,aName1,aCount2,aName2,aCount3,aName3){
 printFarmInventory(12,'Cows',2,'Chicken',324,'Pigs')
 */
 
-let greeting2 = name => console.log(`Hello ${name}!`);
-
-const userInfo = (firstName, lastName, callback) => {
-    const fullName = `${firstName} ${lastName}`
-    callback(fullName);
-}
-userInfo('John', 'Doe', greeting2);
+const hasMeeting = false;
+const meeting = new Promise((resolve, reject) => {
+  if (!hasMeeting) {
+    const meetingDetails = {
+      name: "Marketing Meeting",
+      location: "Skype",
+      time: "1:00 PM",
+    };
+    resolve(meetingDetails);
+  } else {
+    reject(new Error("Meeting already scheduled"));
+  }
+});
+const addToCalendar = (meetingDetails) => {
+  const calendar = `${meetingDetails.name} is scheduled at ${meetingDetails.time} on ${meetingDetails.location}`;
+  return Promise.resolve(calendar);
+};
+meeting
+  .then(addToCalendar)
+  .then((res) => {
+    console.log("Meeting Scheduled");
+    console.log(res);
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });
