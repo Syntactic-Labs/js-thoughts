@@ -158,10 +158,11 @@ function printFarmInventory(aCount1,aName1,aCount2,aName2,aCount3,aName3){
 }
 printFarmInventory(12,'Cows',2,'Chicken',324,'Pigs')
 */
-function greeting1(name){
-    console.log(`Hello ${name}`)
-}
-greeting1("John");
 
 let greeting2 = name => console.log(`Hello ${name}!`);
-greeting2("Mike");
+
+const userInfo = (firstName, lastName, callback) => {
+    const fullName = `${firstName} ${lastName}`
+    callback(fullName);
+}
+userInfo('John', 'Doe', greeting2);
