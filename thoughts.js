@@ -159,29 +159,14 @@ function printFarmInventory(aCount1,aName1,aCount2,aName2,aCount3,aName3){
 printFarmInventory(12,'Cows',2,'Chicken',324,'Pigs')
 */
 
-const hasMeeting = false;
-const meeting = new Promise((resolve, reject) => {
-  if (!hasMeeting) {
-    const meetingDetails = {
-      name: "Marketing Meeting",
-      location: "Skype",
-      time: "1:00 PM",
-    };
-    resolve(meetingDetails);
-  } else {
-    reject(new Error("Meeting already scheduled"));
-  }
+const promise1 = Promise.resolve('Promise 1 complete');
+const promise2 = new Promise((res,rej) => {
+    setTimeout(() => {
+      res("Promise 2 complete");
+    }, 2000);
 });
-const addToCalendar = (meetingDetails) => {
-  const calendar = `${meetingDetails.name} is scheduled at ${meetingDetails.time} on ${meetingDetails.location}`;
-  return Promise.resolve(calendar);
-};
-meeting
-  .then(addToCalendar)
-  .then((res) => {
-    console.log("Meeting Scheduled");
-    console.log(res);
-  })
-  .catch((err) => {
-    console.log(err.message);
-  });
+
+//promise1.then(res => console.log(res));
+//promise2.then(res => console.log(res));
+
+Promise.all([promise1, promise2]).then((res) => console.log(res));
